@@ -1,0 +1,43 @@
+{
+    "bubble": {
+        "part1": "Hoi, ik ben Jarno. Een Software Engineer uit Rotterdam.",
+        "part2": "In mijn vrije tijd zoek ik de natuur op met mijn hond en op gezellige avondjes prikkel ik graag mijn smaakpapillen met speciaal biertjes.",
+        "part3": "Leuk dat je op mijn website bent geland. Ik update je graag over mijn werkervaring en skills. Scrollen maar! :-)"
+    },
+
+    "now": "Nu",
+    "portfolio": {
+        "filter": {
+            "all":"Alles"
+        }
+    },
+    "experience": "Werkervaring, opleiding & skills",
+    "projects": {
+        "title": "Mijn Projecten",
+        "tech-stack": "Tech stack",
+        "tools": "Tools"
+    },
+    "contact": {
+        "title": "Wil je samenwerken of heb je vragen?",
+        "subtitle": "Stuur me dan gerust een berichtje.",
+        "form": {
+            "name": "Naam",
+            "email": "E-mailadres",
+            "subject": "Onderwerp",
+            "message": "Bericht",
+            "errors": {
+                "name": "Naam is een verplicht veld",
+                "email": "E-mailadres is een verplicht veld",
+                "subject": "Onderwerp is een verplicht veld",
+                "message": "Bericht is een verplicht veld"
+            },
+            "button": {
+                "default": "Versturen",
+                "sending": "Versturen...",
+                "send": "Bericht verzonden!",
+                "error": "Controleer of alle velden juist zijn ingevuld.",
+                "error-network": "Er is wat fout gegaan, probeer het later opnieuw."
+            }
+        }
+    }
+}

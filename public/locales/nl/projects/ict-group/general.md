@@ -1,0 +1,1 @@
+ICT Group is een detacheringsbureau die oplossingen levert binnen informatie en communicatietechnologie. Binnen de ICT group heb ik op projectbasis ervaring opgedaan als full stack software engineer voor PSA Antwerpen, de grootste containerbehandelaar in de Haven van Antwerpen. 

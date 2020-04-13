@@ -1,0 +1,41 @@
+/* === Progress Bar === */
+.skill-item .progress {
+    height: 11px;
+    margin-bottom: 0;
+    overflow: hidden;
+    background-color: transparent;
+    border-radius: 15px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+    display: block;
+}
+
+.skill-item .progress-bar {
+    border-radius: 15px;
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 10px;
+    color: #fff;
+    background-color: #3281B9;
+    text-align: center;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: width 0.8s ease;
+    -o-transition: width 0.8s ease;
+    transition: width 0.8s ease;
+}
+
+/*=================================================================*/
+/*                      SKILLS                              
+/*=================================================================*/
+.skill-item .skill-info h4 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.skill-item .skill-info span {
+    font-size: 14px;
+}

@@ -1,0 +1,7 @@
+Vakantiehuistekoop.nl is een huizensite voor vakantiehuizen die online te koop worden aangeboden. De uitdaging was om een volledig nieuw dashboard te ontwikkelen, zodat de verkopers oftewel de gebruikers zelf hun huizen konden aanmelden. Denk hierbij aan het plaatsen van foto’s met de bijbehorende specificaties. 
+
+Om te voorkomen dat dit niet te veel ruimte in beslag nam en de snelheid van de website zou vertragen, heb ik een optimalisatie procedure gemaakt. Het uploaden van afbeeldingen van huizen wordt asynchroon gedaan, zodat de websitebezoekers continu een snelle website voorgeschoteld krijgen.
+
+Verder kan een huis met verschillende pakketten worden uitgebreid. Zo’n pakket zorgt ervoor dat het huis ook wordt doorgeplaatst op andere relevante websites. Om van deze mogelijkheid gebruik te kunnen maken moet de gebruiker een abonnement afsluiten. Om dit te automatiseren heb ik Mollie als betaalprovider ingesteld. Mollie zorgt voor de betaling en verwerking van de automatische incasso’s. Per transactie wordt er een update naar de server gestuurd om een overzicht te verkrijgen welke abonnementen verlengd kunnen worden. 
+
+Tevens wenste de klant om een videopresentatie te genereren met een voice over. Om dit voor elkaar te krijgen heb ik een koppeling gemaakt met Taggle. Dit proces speelde zich af op de achtergrond. Zodra de video gegenereerd is, komt het online te staan onder de relevante vakantiewoning.

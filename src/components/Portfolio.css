@@ -1,0 +1,146 @@
+/*=================================================================*/
+/*                      PORTFOLIO                              
+/*=================================================================*/
+.portfolio-wrapper [class*=col-] {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio-item .thumb {
+    overflow: hidden;
+}
+
+.portfolio-item .details {
+    color: #FFF;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.portfolio-item .details h4 {
+    color: #FFF;
+    font-size: 20px;
+    margin: 0;
+    padding: 20px;
+}
+
+.portfolio-item .details span.term {
+    color: #FFF;
+    background: #3281B9;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: 14px;
+    opacity: 0;
+    display: inline-block;
+    padding: 3px 10px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    transform: translateY(-40px);
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+.portfolio-item .mask {
+    background: #1B262C;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.portfolio-item:hover .mask {
+    opacity: 0.9;
+}
+
+.portfolio-item:hover .details span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.portfolio-item:hover .details .more-button {
+    opacity: 1;
+}
+
+.portfolio-filter {
+    margin-bottom: 25px;
+}
+
+.portfolio-filter li {
+    color: #5E5C7F;
+    cursor: pointer;
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.portfolio-filter li:hover {
+    color: #3281B9;
+}
+
+.portfolio-filter li.current {
+    color: #3281B9;
+}
+
+.portfolio-filter li:not(:last-child) {
+    margin-right: 1.8rem;
+}
+
+select.portfolio-filter-mobile {
+    font-size: 16px;
+    border-radius: 10px;
+    outline: 0;
+    margin-bottom: 30px;
+    position: relative;
+    width: 100%;
+}
+
+.pf-filter-wrapper {
+    position: relative;
+}
+
+.pf-filter-wrapper:after {
+    content: "";
+    font-family: "FontAwesome";
+    position: absolute;
+    top: 0;
+    right: 20px;
+    color: #000;
+}
+
+.portfolio-dialog {
+    border-radius: 25px;
+    padding: 30px;
+    text-align: left;
+    max-width: 650px;
+    margin: 40px auto;
+    position: relative;
+}
+
+.portfolio-dialog-bg {
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
