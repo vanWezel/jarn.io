@@ -5,6 +5,7 @@ import { useHistory, useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown'
 import { Bounce } from 'react-awesome-reveal';
 import { Link } from 'react-router-dom';
+import ReactGA from 'react-ga';
 
 import Portfolio from '../components/Portfolio';
 import Projects from '../data/Projects';
@@ -27,10 +28,12 @@ const projects = Projects.map(item => {
 
 function Project() {
     const { tag, slug } = useParams();
-    const [description, setDescription] = useState('');
     const { t } = useTranslation();
+    const [description, setDescription] = useState('');
 
     useEffect(() => {
+        ReactGA.pageview(window.location.pathname);
+
         fetch(`/locales/nl/projects/${tag}/${slug}.md`).then(response => {
             response.text().then(text => setDescription(text));
         });
@@ -73,7 +76,7 @@ function Project() {
                                 <div className="project-text">
                                     <h1>{project.name}</h1>
                                     <h3>{project.employer}</h3>
-                                    <ReactMarkdown source={description} />
+                                    <ReactMarkdown source={description ? description : t('projects.loading')} />
                                 </div>
                             </div>
 
@@ -82,7 +85,7 @@ function Project() {
                                     <h4>{t('projects.tech-stack')}</h4>
                                     <ul className="list-inline">
                                         <Bounce cascade triggerOnce damping={0.1}>
-                                            {project.techstack.map(item => <li className="list-inline-item rounded list-item-bg">{item}</li>)}
+                                            {project.techstack.map((item, index) => <li key={index} className="list-inline-item rounded list-item-bg">{item}</li>)}
                                         </Bounce>
                                     </ul>
                                 </div>}
@@ -91,7 +94,7 @@ function Project() {
                                     <h4>{t('projects.tools')}</h4>
                                     <ul className="list-inline">
                                         <Bounce cascade triggerOnce damping={0.1}>
-                                            {project.tools.map(item => <li className="list-inline-item rounded list-item-bg">{item}</li>)}
+                                            {project.tools.map((item, index) => <li key={index} className="list-inline-item rounded list-item-bg">{item}</li>)}
                                         </Bounce>
                                     </ul>
                                 </div>}

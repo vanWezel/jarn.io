@@ -14,7 +14,8 @@
     "projects": {
         "title": "Mijn Projecten",
         "tech-stack": "Tech stack",
-        "tools": "Tools"
+        "tools": "Tools",
+        "loading": "Momentje..."
     },
     "contact": {
         "title": "Wil je samenwerken of heb je vragen?",

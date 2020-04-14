@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import ReactGA from 'react-ga';
 
 import Intro from '../sections/Intro';
 import Experience from '../sections/Experience';
@@ -8,6 +9,10 @@ import Contact from '../sections/Contact';
 import './Home.css';
 
 function Home() {
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname);
+    });
+
     return (<React.Fragment>
         <main>
             <Intro />

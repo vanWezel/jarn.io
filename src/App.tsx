@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
 import './css/simple-line-icons.css';
 import './App.scss';
 
@@ -10,20 +9,19 @@ import Home from './pages/Home';
 import Project from './pages/Project';
 
 function App() {
-  return (<React.Fragment>
-    <Router>
-      <ScrollToTop />
-      <Header />
-      <Switch>
-        <Route path="/project/:tag/:slug" exact={false}>
-          <Project />
-        </Route>
-        <Route path="/" exact={true}>
-          <Home />
-        </Route>
-      </Switch>
-    </Router>
-  </React.Fragment>);
+  
+  return (<Router>
+    <ScrollToTop />
+    <Header />
+    <Switch>
+      <Route path="/project/:tag/:slug" exact={false}>
+        <Project />
+      </Route>
+      <Route path="/" exact={true}>
+        <Home />
+      </Route>
+    </Switch>
+  </Router>);
 }
 
 export default App;
