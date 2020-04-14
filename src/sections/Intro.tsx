@@ -14,7 +14,7 @@ function Intro() {
             <div className="row align-items-top">
                 <div className="col-md-3">
                     <div className="text-center text-md-left">
-                        <img src="images/jarno-van-wezel.jpg" alt="Jarno van Wezel" className="avatar rounded-circle" />
+                        <img src="images/jarno-van-wezel.jpg" alt="Jarno van Wezel" className="avatar" />
                     </div>
                 </div>
 

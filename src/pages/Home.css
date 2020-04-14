@@ -25,6 +25,8 @@ section .social-icons li a {
 .avatar {
     max-width: 50%;
     margin-bottom: 20px;
+    border-radius: 100%;
+    overflow: hidden;
 }
 
 @media only screen and (min-width: 768px) {
