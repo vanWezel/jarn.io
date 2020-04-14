@@ -20,16 +20,16 @@ function Contact() {
             [e.target.name]: e.target.value,
         });
 
-        if ((e.target.name === 'email' && validEmail(e.target.value)) || e.target.value.length > 2) {
+        if (e.target.name === 'email' && !validEmail(e.target.value)) {
+            setErrors({
+                ...errors,
+                [e.target.name]: t(`contact.form.errors.email`)
+            });
+        } else if (e.target.value.length > 2) {
             const _errors = { ...errors };
             delete _errors[e.target.name];
             setErrors(_errors);
-        } else if (e.target.name === 'email' && !validEmail(e.target.value)) {
-            setErrors({
-                ...errors,
-                [e.target.name ]: t(`contact.form.errors.${e.target.name }`)
-            });
-        }
+        } 
     }
 
     const sendMessage = () => {
@@ -40,7 +40,7 @@ function Contact() {
             for (const index in fields) {
                 const name = fields[index];
                 if (!(name in values) || ((name === 'email' && !validEmail(values[name])) || values[name].length < 2)) {
-                    _errors[name] = t(`contact.form.errors.${name}`);
+                    _errors[name] = t(`contact.form.errors.${(name === 'email' && !validEmail(values[name])) ? 'email' : 'requierd'}`);
                 }
             }
             setErrors(_errors);

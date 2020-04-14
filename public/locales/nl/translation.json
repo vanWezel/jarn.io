@@ -26,10 +26,8 @@
             "subject": "Onderwerp",
             "message": "Bericht",
             "errors": {
-                "name": "Naam is een verplicht veld",
-                "email": "E-mailadres is een verplicht veld",
-                "subject": "Onderwerp is een verplicht veld",
-                "message": "Bericht is een verplicht veld"
+                "requierd": "Dit is een verplicht veld",
+                "email": "Dit is geen geldig e-mailadres"
             },
             "button": {
                 "default": "Versturen",
