@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 import ReactGA from 'react-ga';
 
 import Intro from '../sections/Intro';
@@ -13,23 +12,17 @@ function Home() {
         ReactGA.pageview(window.location.pathname);
     });
 
-    return (<React.Fragment>
-        <main>
-            <Intro />
+    return (<main>
+        <Intro />
 
-            <Experience />
+        <Experience />
 
-            <Work />
+        <Work />
 
-            <Contact />
+        <Contact />
 
-            <div className="spacer" style={{ height: 96 }}></div>
-        </main>
-
-        <AnchorLink href="#home">
-            <i className="fas fa-arrow-up"></i>
-        </AnchorLink>
-    </React.Fragment>);
+        <div className="spacer" style={{ height: 96 }}></div>
+    </main>);
 }
 
 export default Home;

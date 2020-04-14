@@ -93,20 +93,23 @@ function Contact() {
                         <div className="row">
                             <div className="column col-md-6">
                                 <div className="form-group">
-                                    <input type="text" className="form-control" placeholder={t('contact.form.name')} name="name" onChange={updateValue}/>
+                                    <label htmlFor="input-name">{t('contact.form.name')}</label>
+                                    <input type="text" className="form-control" placeholder={t('contact.form.name')} name="name" id="input-name" onChange={updateValue}/>
                                     <small className="form-text text-error">{errors['name']}</small>
                                 </div>
                             </div>
 
                             <div className="column col-md-6">
                                 <div className="form-group">
-                                    <input type="email" className="form-control" placeholder={t('contact.form.email')} name="email" onChange={updateValue}/>
+                                    <label htmlFor="input-email">{t('contact.form.email')}</label>
+                                    <input type="email" className="form-control" placeholder={t('contact.form.email')} name="email" id="einput-mail" onChange={updateValue}/>
                                     <small className="form-text text-error">{errors['email']}</small>
                                 </div>
                             </div>
 
                             <div className="column col-md-12">
                                 <div className="form-group">
+                                    <label htmlFor="input-subject">{t('contact.form.subject')}</label>
                                     <input type="text" className="form-control" placeholder={t('contact.form.subject')} name ="subject" onChange={updateValue}/>
                                     <small className="form-text text-error">{errors['subject']}</small>
                                 </div>
@@ -114,7 +117,8 @@ function Contact() {
 
                             <div className="column col-md-12">
                                 <div className="form-group">
-                                    <textarea className="form-control" rows={5} placeholder={t('contact.form.message')} name="message" onChange={updateValue}>
+                                    <label htmlFor="input-message">{t('contact.form.message')}</label>
+                                    <textarea className="form-control" rows={5} placeholder={t('contact.form.message')} name="message" id="mesinput-sage" onChange={updateValue}>
                                     </textarea>
                                     <small className="form-text text-error">{errors['message']}</small>
                                 </div>

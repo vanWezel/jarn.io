@@ -40,6 +40,10 @@ section .social-icons li a {
     }
 }
 
+label {
+    display: none;
+}
+
 .contact-info {
     margin-bottom: 40px;
 }

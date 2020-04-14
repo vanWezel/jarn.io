@@ -31,7 +31,7 @@ const projects = Projects.map(item => {
 function Work() {
     const { t } = useTranslation();
 
-    return (<section id="works">
+    return (<section id="projects">
         <div className="container">
             <Fade direction="top" triggerOnce={true}>
                 <h2 className="section-title">{t('projects.title')}</h2>
