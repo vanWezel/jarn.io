@@ -1,9 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import './css/bootstrap.min.css';
 import './css/simple-line-icons.css';
-import './App.css';
+import './App.scss';
 
 import ScrollToTop from './ScrollToTop';
 import Header from './sections/Header';

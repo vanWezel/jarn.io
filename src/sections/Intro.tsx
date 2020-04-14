@@ -6,6 +6,7 @@ import Typist from 'react-typist';
 import 'react-typist/src/Cursor.scss';
 
 function Intro() {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { t, i18n, ready } = useTranslation();
     
     return (<section id="home">

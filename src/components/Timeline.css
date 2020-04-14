@@ -6,7 +6,6 @@
     padding-left: 50px;
     margin-bottom: 50px;
     position: relative;
-    background-color: transparent;
     width: 100%;
 }
 
@@ -38,7 +37,7 @@
 }
 
 .timeline .content .time {
-    color: #8B88B1;
+    color: #fff;
     font-size: 14px;
 }
 

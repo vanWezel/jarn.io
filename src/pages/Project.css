@@ -3,6 +3,10 @@
     font-size: 30px;
 }
 
+.project-home a {
+    text-decoration: none;
+}
+
 .project-content {
     padding: 20px;
     margin: 10px;

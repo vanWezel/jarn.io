@@ -10,7 +10,7 @@ function Contact() {
     const [buttonText, setButtonText] = useState('');
 
     const validEmail = (email: string) => {
-        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
     }
 
@@ -90,8 +90,6 @@ function Contact() {
 
                 <div className="col-md-8">
                     <form id="contact-form" className="contact-form mt-6" method="post">
-                        <div className="messages"></div>
-
                         <div className="row">
                             <div className="column col-md-6">
                                 <div className="form-group">

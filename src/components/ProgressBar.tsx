@@ -13,7 +13,7 @@ function ProgressBar(props: ProgressBarProps) {
 
     useEffect(() => {
         setWidth(props.value);
-    }, []);
+    }, [props.value]);
     
     return (<Fade direction="top" triggerOnce={true}>
         <div className="skill-item">
