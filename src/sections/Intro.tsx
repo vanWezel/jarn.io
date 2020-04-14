@@ -35,7 +35,7 @@ function Intro() {
                         </h1>
 
                         <div className="mt-4">
-                            <a href="/" className="btn btn-default">Download CV</a>
+                            <a href="/files/cv.pdf" download="CV - Jarno van Wezel.pdf" className="btn btn-default">Download CV</a>
                         </div>
                     </div>
                 </div>
