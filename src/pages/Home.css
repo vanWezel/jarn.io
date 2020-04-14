@@ -1,3 +1,7 @@
+.site-logo a {
+    text-decoration: none;
+}
+
 section {
     padding-top: 110px;
     position: relative;
@@ -30,10 +34,10 @@ section .social-icons li a {
 }
 
 @media only screen and (min-width: 768px) {
-.avatar {
-    max-width: 100%;
-    margin-bottom: 0;
-}
+    .avatar {
+        max-width: 100%;
+        margin-bottom: 0;
+    }
 }
 
 .contact-info {
