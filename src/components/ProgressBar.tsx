@@ -18,7 +18,7 @@ function ProgressBar(props: ProgressBarProps) {
     return (<Fade direction="top" triggerOnce={true}>
         <div className="skill-item">
             <div className="skill-info clearfix">
-                <h4 className="float-left mb-3 mt-0">{props.label}</h4>
+                <h4>{props.label}</h4>
             </div>
             <div className="progress">
                 <div className="progress-bar" role="progressbar" aria-valuemin={0} aria-valuemax={100} style={{ width: `${width}%` }}></div>
