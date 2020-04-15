@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 
 import './ProgressBar.css';
@@ -8,22 +8,16 @@ interface ProgressBarProps {
     value: number;
 }
 
-function ProgressBar(props: ProgressBarProps) {
-    const [width, setWidth] = useState(0);
-
-    useEffect(() => {
-        setWidth(props.value);
-    }, [props.value]);
-    
+function ProgressBar(props: ProgressBarProps) { 
     return (<Fade direction="top" triggerOnce={true}>
         <div className="skill-item">
             <div className="skill-info clearfix">
                 <h4>{props.label}</h4>
             </div>
             <div className="progress">
-                <div className="progress-bar" role="progressbar" aria-valuemin={0} aria-valuemax={100} style={{ width: `${width}%` }}></div>
+                <div className="progress-bar" style={{ width: `${props.value}%` }}></div>
             </div>
-            <div className="spacer" style={{ height: 20 }}></div>
+            <div className="spacer"></div>
         </div>
     </Fade>);
 }

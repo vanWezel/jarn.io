@@ -19,7 +19,7 @@ function Intro() {
                 </div>
 
                 <div className="col-md-9 triangle-left-md triangle-top-sm">
-                    <div className="chat rounded bg-light padding-30">
+                    <div className="chat rounded bg-light">
                         <h1>
                             {ready && <Typist>
                                 <span>{t('bubble.part1')}</span>

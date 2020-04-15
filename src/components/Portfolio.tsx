@@ -40,7 +40,7 @@ const Portfolio = (props: PortfolioProps) => {
             }
         });
 
-        setTimeout(() => { grid.current.layout() }, 100);
+        setTimeout(() => { grid.current.layout() }, 500);
     }, []);
 
     useEffect(() => {
@@ -69,7 +69,7 @@ const Portfolio = (props: PortfolioProps) => {
         </Fade>}
 
         <div className="row portfolio-wrapper">
-            {props.items.map((item, index) => <div key={index} className={`col-md-4 col-sm-6 grid-item ${item.filter}`}>
+            {props.items.map((item, index) => <div key={index} className={`col-lg-4 col-sm-6 grid-item ${item.filter}`}>
                 <Link to={item.url} className="work-content">
                     <div className="portfolio-item rounded ">
                         <div className="details">

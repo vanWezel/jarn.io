@@ -37,7 +37,7 @@ function Work() {
                 <h2 className="section-title">{t('projects.title')}</h2>
             </Fade>
 
-            <div className="spacer" style={{ height: 60 }}></div>
+            <div className="spacer"></div>
 
             <Portfolio filters={filters} items={projects} />
         </div>

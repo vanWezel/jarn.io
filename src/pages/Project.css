@@ -14,23 +14,8 @@
     font-size: 18px;
 }
 
-@media only screen and (min-width: 768px) {
-    .project-home {
-        margin: 20px 0 0 0;
-    }
-
-    .project-content {
-        padding: 80px;
-        margin: 20px 0 20px 0;
-    }
-}
-
 .project-content .content-right {
-    margin-top: 90px;
-}
-
-.project-text {
-    margin-right: 80px;
+    margin-top: 20px;
 }
 
 .project-content h1 {
@@ -52,4 +37,18 @@
     background: #3281B9;
     padding: 1px 10px;
     margin-bottom: 0.5em;
+}
+
+@media only screen and (min-width: 1200px) {
+    .project-content {
+        padding: 80px;
+    }
+
+    .project-text {
+        margin-right: 40px;
+    }
+
+    .project-content .content-right {
+        margin-top: 90px;
+    }
 }

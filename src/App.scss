@@ -63,12 +63,14 @@ h5,
 h6 {
   color: #fff;
   margin: 20px 0;
+  line-height: 1.2;
 }
 
 h1,
 h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
+  word-break: break-word;
 }
 
 h3,
@@ -138,8 +140,27 @@ pre {
   border-radius: 0;
 }
 
+p {
+  margin-bottom: 1em;
+}
+
 .spacer {
   clear: both;
+  height: 30px;
+
+  &.-half {
+    height: 15px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .spacer {
+    height: 60px;
+
+    &.-half {
+      height: 30px;
+    }
+  }
 }
 
 .circle {

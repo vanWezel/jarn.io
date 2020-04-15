@@ -16,7 +16,7 @@ const Projects = [
         description: 'projects:webnl.expeditieHaringvliet',
         tools: [],
         techstack: [],
-        extraTechstack: ['Laravel', 'Amazon AWS S3 Buckets', 'vue.js']
+        extraTechstack: ['Laravel', 'vue.js', 'Amazon AWS S3']
     }, 
     {
         employerIndex: 1,
@@ -26,7 +26,7 @@ const Projects = [
         description: 'projects:webnl.vakantiehuistekoop',
         tools: [],
         techstack: [],
-        extraTechstack: ['Laravel', 'Amazon AWS S3 Buckets', 'vue.js']
+        extraTechstack: ['Laravel', 'vue.js', 'Amazon AWS S3']
     }, 
     {
         employerIndex: 1,
@@ -36,7 +36,7 @@ const Projects = [
         description: 'projects:webnl.thegreencloud',
         tools: [],
         techstack: [],
-        extraTechstack: ['Laravel', 'Amazon AWS S3 Buckets', 'vue.js', 'Exact Online']
+        extraTechstack: ['Laravel', 'vue.js', 'Exact Online', 'Amazon AWS S3']
     }, 
     {
         employerIndex: 1,
@@ -54,8 +54,8 @@ const Projects = [
         url: '/project/webnl/site-launch',
         image: '/images/projects/webnl/site-launch.jpg',
         description: 'projects:webnl.site-launch-knop',
-        tools: ['Raspberry PI'],
-        techstack: ['PHP', 'Python', 'Node.js', 'socket.io'],
+        tools: ['Raspberry PI', 'Debian'],
+        techstack: ['PHP', 'Python', 'Node.js', 'Socket.io'],
         extraTechstack: [],
     },
 ];

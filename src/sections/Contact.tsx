@@ -57,7 +57,6 @@ function Contact() {
 
             setButtonText(t('contact.form.button.sending'))
             fetch('/contact.php', requestOptions)
-                .then(response => response.json())
                 .then(() => {
                     setButtonText(t('contact.form.button.send'));
                     setTimeout(() => setButtonText(''), 2000);
@@ -77,7 +76,7 @@ function Contact() {
                 <h2 className="section-title">{t('contact.title')}</h2>
             </Fade>
 
-            <div className="spacer" style={{ height: 60 }}></div>
+            <div className="spacer"></div>
 
             <div className="row">
                 <div className="col-md-4">
@@ -132,6 +131,7 @@ function Contact() {
                 </div>
             </div>
         </div>
+        <div className="spacer"></div>
     </section>);
 }
 

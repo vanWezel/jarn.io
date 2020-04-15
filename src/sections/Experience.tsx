@@ -17,11 +17,11 @@ function Experience() {
                 <h2 className="section-title">{t('experience')}</h2>
             </Fade>
 
-            <div className="spacer" style={{ height: 60 }}></div>
+            <div className="spacer"></div>
 
             <div className="row">
                 <div className="col-md-6">
-                    <div className="spacer d-md-none d-lg-none" style={{ height: 30 }}></div>
+                    <div className="spacer d-md-none d-lg-none"></div>
 
                     <Timeline items={Employers.map((employer) => {
                         return {
@@ -31,14 +31,14 @@ function Experience() {
                         }
                     })} type="employers" />
 
-                    <div className="spacer" style={{ height: 30 }}></div>
+                    <div className="spacer -half"></div>
 
                     <Timeline items={Schools} type="school" />
+
+                    <div className="spacer d-lg-none"></div>
                 </div>
 
-
                 <div className="col-md-6">
-                <div className="spacer d-lg-none" style={{ height: 60 }}></div>
                     {Skills.map((skill, index) => <ProgressBar label={skill.name} value={skill.value} key={index} />)}
                 </div>
             </div>

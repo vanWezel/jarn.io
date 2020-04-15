@@ -32,7 +32,7 @@ function Timeline(props: TimelineProps) {
     }
     
     return (<Fade cascade direction="top" triggerOnce={true}>
-        <div className={`timeline -${props.type} bg-dark rounded  padding-30 overflow-hidden`}>
+        <div className={`timeline -${props.type} bg-dark rounded padding-30 overflow-hidden`}>
             <span className="line"></span>
             {props.items.map((item, index) => <div key={index} className="timeline-container">
                 <div className="content">
@@ -42,8 +42,7 @@ function Timeline(props: TimelineProps) {
                 </div>
             </div>)}
         </div>
-    </Fade>
-    );
+    </Fade>);
 }
 
 export default Timeline;

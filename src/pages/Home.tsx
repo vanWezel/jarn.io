@@ -20,8 +20,6 @@ function Home() {
         <Work />
 
         <Contact />
-
-        <div className="spacer" style={{ height: 96 }}></div>
     </main>);
 }
 

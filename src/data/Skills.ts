@@ -8,6 +8,18 @@ const Skills = [
         value: 90
     },
     {
+        name: 'Git',
+        value: 90
+    },
+    {
+        name: 'Typescript',
+        value: 90
+    },
+    {
+        name: 'React',
+        value: 80
+    },
+    {
         name: 'C# / .NET',
         value: 80
     },
@@ -24,20 +36,8 @@ const Skills = [
         value: 50
     },
     {
-        name: 'Typescript',
-        value: 90
-    },
-    {
-        name: 'React',
-        value: 80
-    },
-    {
         name: 'Bash',
         value: 50
-    },
-    {
-        name: 'Git',
-        value: 90
     },
 ];
 

@@ -64,22 +64,23 @@ function Project() {
 
     return (<main>
         <div className="row justify-content-center">
-            <div className="col-md-8">
-                <div className="project-home">
+            <div className="col-md-10 col-lg-8">
+                <div className="project-home d-lg-none">
                     <Link to="/" title="Home"><i className="icon-home"></i></Link>
                 </div>
                 
                 <div className="rounded bg-light project-content">
                     <div className="row justify-content-between">
-                        <div className="col-lg-8">
+                        <div className="col-xl-8">
                             <div className="project-text">
                                 <h1>{project.name}</h1>
                                 <h3>{project.employer}</h3>
-                                <ReactMarkdown source={description ? description : t('projects.loading')} />
+                                {description && <ReactMarkdown source={description} />}
+                                {!description && <p>{t('projects.loading')}</p>}
                             </div>
                         </div>
 
-                        <div className="col-lg-4 content-right">
+                        <div className="col-xl-4 content-right">
                             {project.techstack && <div>
                                 <h4>{t('projects.tech-stack')}</h4>
                                 <ul className="list-inline">
