@@ -26,6 +26,8 @@ function Timeline(props: TimelineProps) {
     const format = (date: string) => {
         if (!date) {
             return t('now');
+        } else if (date.length === 4) {
+            return date;
         }
 
         return moment(date).format('MMM YY');
