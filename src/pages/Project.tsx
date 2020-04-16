@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import './Project.css';
 import { useTranslation } from 'react-i18next';
@@ -38,7 +37,7 @@ function Project() {
         fetch(`/locales/nl/projects/${tag}/${slug}.md`).then(response => {
             response.text().then(text => setDescription(text));
         });
-    }, []);
+    }, [tag, slug]);
 
     const history = useHistory();
     const projectsFilter = Projects.filter(project => project.url === history.location.pathname).map(item => {
