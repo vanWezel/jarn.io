@@ -7,6 +7,7 @@ import ScrollToTop from './ScrollToTop';
 import Header from './sections/Header';
 import Home from './pages/Home';
 import Project from './pages/Project';
+import Error404 from './pages/Error404';
 
 function App() {
   
@@ -14,12 +15,9 @@ function App() {
     <ScrollToTop />
     <Header />
     <Switch>
-      <Route path="/project/:tag/:slug" exact={false}>
-        <Project />
-      </Route>
-      <Route path="/" exact={true}>
-        <Home />
-      </Route>
+      <Route path="/" exact={true} component={Home} />
+      <Route path="/project/:tag/:slug" exact={false} component={Project} />
+      <Route path="*" component={Error404} />
     </Switch>
   </Router>);
 }
