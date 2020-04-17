@@ -10,6 +10,7 @@ import './Home.css';
 function Home() {
     useEffect(() => {
         ReactGA.pageview(window.location.pathname);
+        document.title = 'Jarno van Wezel - Software Engineer - Rotterdam';
     });
 
     return (<main>

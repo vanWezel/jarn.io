@@ -9,6 +9,7 @@ export interface PortfolioItem {
     name: string;
     url: string;
     image: string;
+    image2x: string;
     employer: string;
     filter: string;
     techstack?: string[];
@@ -77,7 +78,7 @@ const Portfolio = (props: PortfolioProps) => {
                             <h4 className="title">{item.name}</h4>
                         </div>
                         <div className="thumb">
-                            <img src={item.image} alt={item.name} />
+                            <img src={item.image} srcSet={`${item.image}, ${item.image2x} 2x`} alt={item.name} />
                             <div className="mask"></div>
                         </div>
                     </div>

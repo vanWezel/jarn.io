@@ -8,36 +8,13 @@ import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
 import Portfolio from '../components/Portfolio';
-import Projects from '../data/Projects';
+import Projects, {ProjectsMapped} from '../data/Projects';
 import Employers from '../data/Employers';
-
-const projects = Projects.map(item => {
-    const employer = Employers[item.employerIndex];
-
-    return {
-        employer: employer.name,
-        filter: employer.filter ?? '',
-        techstack: employer.techstack,
-        tools: employer.tools,
-        name: item.name,
-        url: item.url,
-        image: item.image,
-        description: "",
-    }
-});
 
 function Project() {
     const { tag, slug } = useParams();
     const { t } = useTranslation();
     const [description, setDescription] = useState('');
-
-    useEffect(() => {
-        ReactGA.pageview(window.location.pathname);
-
-        fetch(`/locales/nl/projects/${tag}/${slug}.md`).then(response => {
-            response.text().then(text => setDescription(text));
-        });
-    }, [tag, slug]);
 
     const history = useHistory();
     const projectsFilter = Projects.filter(project => project.url === history.location.pathname).map(item => {
@@ -51,16 +28,24 @@ function Project() {
             employer: employer.name,
             name: item.name,
             image: item.image,
+            image2x: item.image2x,
             description: item.description,
         };
     });
-
-    if (projectsFilter.length === 0) {
-        history.replace('/404');
-        return null;
-    }
-
+    
     const project = projectsFilter[0];
+
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname);
+
+        fetch(`/locales/nl/projects/${tag}/${slug}.md`).then(response => {
+            response.text().then(text => setDescription(text));
+        });
+    }, [tag, slug]);
+
+    useEffect(() => {
+        document.title = `Project: ${project.name} - Jarno van Wezel - Software Engineer - Rotterdam`;
+    }, [project]);
 
     return (<main>
         <div className="row justify-content-center">
@@ -102,7 +87,7 @@ function Project() {
                     </div>
                 </div>  
             
-                <Portfolio items={projects.filter(project => project.url !== history.location.pathname)} />
+                <Portfolio items={ProjectsMapped.filter(project => project.url !== history.location.pathname)} />
             </div>
         </div>
     </main>);
