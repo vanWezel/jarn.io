@@ -13,7 +13,6 @@ const filters = Employers.filter((item) => item.filter.length > 0).map((employer
     }
 });
 
-
 function Work() {
     const { t } = useTranslation();
 

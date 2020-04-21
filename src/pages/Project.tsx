@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
 import Portfolio from '../components/Portfolio';
-import Projects, {ProjectsMapped} from '../data/Projects';
+import Projects, { ProjectsMapped } from '../data/Projects';
 import Employers from '../data/Employers';
 
 function Project() {
