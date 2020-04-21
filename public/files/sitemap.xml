@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://jarn.io/</loc>
+      <lastmod>2020-04-18</lastmod>
+      <priority>0.5</priority>
+   </url>
+   
+   <url>
+      <loc>https://jarn.io/project/ict-group/merlion</loc>
+      <lastmod>2020-04-21</lastmod>
+      <priority>0.7</priority>
+   </url>
+   
+   <url>
+      <loc>https://jarn.io/project/webnl/expeditie-haringvliet</loc>
+      <lastmod>2020-04-10</lastmod>
+      <priority>0.7</priority>
+   </url>
+
+   <url>
+      <loc>https://jarn.io/project/webnl/vakantiehuistekoop</loc>
+      <lastmod>2020-04-10</lastmod>
+      <priority>0.7</priority>
+   </url>
+   
+   <url>
+      <loc>https://jarn.io/project/webnl/thegreencloud</loc>
+      <lastmod>2020-04-10</lastmod>
+      <priority>0.7</priority>
+   </url>
+
+    <url>
+      <loc>https://jarn.io/project/webnl/fst-group</loc>
+      <lastmod>2020-04-10</lastmod>
+      <priority>0.7</priority>
+   </url>
+    
+    <url>
+      <loc>https://jarn.io/project/webnl/site-launch</loc>
+      <lastmod>2020-04-10</lastmod>
+      <priority>0.7</priority>
+   </url>
+</urlset> 
