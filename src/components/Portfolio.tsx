@@ -71,7 +71,7 @@ const Portfolio = (props: PortfolioProps) => {
 
         <div className="row portfolio-wrapper">
             {props.items.map((item, index) => <div key={index} className={`col-lg-4 col-sm-6 grid-item ${item.filter}`}>
-                <Link to={item.url} className="work-content">
+                <Link to={item.url} className="work-content" title={item.name}>
                     <div className="portfolio-item rounded ">
                         <div className="details">
                             <span className="term">{item.employer}</span>
