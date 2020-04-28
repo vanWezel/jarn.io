@@ -36,6 +36,7 @@ function Contact() {
         try {
             setButtonText('');
             setErrors({});
+            
             const _errors = {};
             for (const index in fields) {
                 const name = fields[index];
@@ -43,6 +44,7 @@ function Contact() {
                     _errors[name] = t(`contact.form.errors.${(name === 'email' && !validEmail(values[name])) ? 'email' : 'requierd'}`);
                 }
             }
+            
             setErrors(_errors);
             
             if (Object.keys(_errors).length > 0) {
@@ -58,6 +60,11 @@ function Contact() {
             setButtonText(t('contact.form.button.sending'))
             fetch('/contact.php', requestOptions)
                 .then(() => {
+                    const form = document.getElementById('contact-form') as HTMLFormElement;
+                    if (form) {
+                        form.reset();
+                    }
+
                     setButtonText(t('contact.form.button.send'));
                     setTimeout(() => setButtonText(''), 2000);
                 }).catch(error => {
@@ -101,7 +108,7 @@ function Contact() {
                             <div className="column col-md-6">
                                 <div className="form-group">
                                     <label htmlFor="input-email">{t('contact.form.email')}</label>
-                                    <input type="email" className="form-control" placeholder={t('contact.form.email')} name="email" id="einput-mail" onChange={updateValue}/>
+                                    <input type="email" className="form-control" placeholder={t('contact.form.email')} name="email" id="input-email" onChange={updateValue}/>
                                     <small className="form-text text-error">{errors['email']}</small>
                                 </div>
                             </div>
