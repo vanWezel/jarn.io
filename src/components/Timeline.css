@@ -4,7 +4,7 @@
 
 .timeline .timeline-container {
     padding-left: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     position: relative;
     width: 100%;
 }
@@ -34,16 +34,19 @@
 
 .timeline .content {
     position: relative;
+    display: block;
+    color: #fff;
+    text-decoration: none;
 }
 
 .timeline .content .time {
-    color: #fff;
+    color: inherit;
     font-size: 14px;
 }
 
 .timeline .content h3 {
     font-size: 20px;
-    margin: 10px 0;
+    margin: 5px 0;
     line-height: 1;
 }
 

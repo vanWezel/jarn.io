@@ -2,6 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import { Fade } from 'react-awesome-reveal';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 import 'moment/locale/nl';
 import './Timeline.css';
@@ -13,6 +14,7 @@ interface TimeLineItem {
     };
     name: string;
     location: string;
+    url?: string;
 }
 
 interface TimelineProps {
@@ -32,17 +34,22 @@ function Timeline(props: TimelineProps) {
 
         return moment(date).format('MMM YY');
     }
-    
+
     return (<Fade cascade direction="top" triggerOnce={true}>
         <div className={`timeline -${props.type} bg-dark rounded padding-30 overflow-hidden`}>
             <span className="line"></span>
-            {props.items.map((item, index) => <div key={index} className="timeline-container">
-                <div className="content">
+            {props.items.map((item, index) => {
+                const Content = <>
                     <span className="time">{format(item.period.start)} - {format(item.period.end)}</span>
                     <h3 className="title">{item.name}</h3>
                     <p>{item.location}</p>
-                </div>
-            </div>)}
+                </>;
+
+                return (<div key={index} className="timeline-container">
+                    {item.url && <Link className="content" to={item.url} title={item.name}>{Content}</Link>}
+                    {!item.url && <div className="content">{Content}</div>}
+                </div>);
+            })}
         </div>
     </Fade>);
 }

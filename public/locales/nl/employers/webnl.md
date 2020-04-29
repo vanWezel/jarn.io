@@ -1,0 +1,1 @@
+Bij WebNL creative studios heb ik ervaring opgedaan in maatwerk oplossingen voor het web in combinatie met een custom cms. Ik was werkzaam als een full stack developer, met de focus op back-end. Ik licht graag een paar leerzame projecten hieronder uit:

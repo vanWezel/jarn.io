@@ -8,7 +8,7 @@ function Header() {
     const match = useRouteMatch();
     const { t } = useTranslation();
 
-    return (<header className="desktop-header-2 d-flex align-items-start flex-column">
+    return (<header className="desktop-header-2 d-flex align-items-start flex-column justify-content-between">
         <nav>
             <ul className="vertical-menu scrollspy">
                 {!match.isExact && <li><Link to="/" title="Home"><i className="icon-home"></i></Link></li>}

@@ -7,14 +7,13 @@ import './Portfolio.css';
 
 export interface PortfolioItem {
     name: string;
-    url: string;
-    image: string;
-    image2x: string;
     employer: string;
-    filter: string;
+    employerSlug: string;
+    url: string;
     techstack?: string[];
     tools?: string[];
-    description: string;
+    image: string;
+    image2x: string;
 }
 
 export interface PortfolioFilter {
@@ -52,14 +51,16 @@ const Portfolio = (props: PortfolioProps) => {
         }
     }, [filter]);
 
+    const filters = props.filters && props.filters.filter(filter => props.items.filter(item => item.employerSlug === filter.className).length !== 0);
+
     return (<React.Fragment>
-        {props.filters && <Fade cascade direction="top" triggerOnce={true}>
+        {filters && <Fade cascade direction="top" triggerOnce={true}>
             <ul className="portfolio-filter list-inline">
                 <li className={`list-inline-item${filter === '*' ? ' current' : ''}`} onClick={() => setFilter('*')}>
                     {t('portfolio.filter.all')}
                 </li>
 
-                {props.filters.map((item, index) => <li
+                {filters.map((item, index) => <li
                     key={index}
                     className={`list-inline-item${filter === item.className ? ' current' : ''}`}
                     onClick={() => setFilter(item.className)}
@@ -70,7 +71,7 @@ const Portfolio = (props: PortfolioProps) => {
         </Fade>}
 
         <div className="row portfolio-wrapper">
-            {props.items.map((item, index) => <div key={index} className={`col-lg-4 col-sm-6 grid-item ${item.filter}`}>
+            {props.items.map((item, index) => <div key={index} className={`col-lg-4 col-sm-6 grid-item ${item.employerSlug}`}>
                 <Link to={item.url} className="work-content" title={item.name}>
                     <div className="portfolio-item rounded ">
                         <div className="details">

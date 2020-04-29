@@ -1,0 +1,1 @@
+Tijdens mijn studietijd heb ik samen met een vriend een bedrijf opgericht genaamd Wesoft om een extra centje bij te verdienen en om mezelf te blijven ontwikkelen in het vakgebied. In de tijd dat we werkzaam waren onder de naam Wesoft hebben websites ontwikkeld voor o.a. een horecagelegenheid, een karateschool en een barbier.

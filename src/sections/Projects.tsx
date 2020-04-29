@@ -6,10 +6,10 @@ import Portfolio from '../components/Portfolio';
 import { ProjectsMapped } from '../data/Projects';
 import Employers from '../data/Employers';
 
-const filters = Employers.filter((item) => item.filter.length > 0).map((employer) => {
+const filters = Employers.map(employer => {
     return {
         name: employer.name,
-        className: employer.filter,
+        className: employer.slug,
     }
 });
 
