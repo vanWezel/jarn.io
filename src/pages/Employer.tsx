@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import ReactMarkdown from 'react-markdown'
 import { Bounce } from 'react-awesome-reveal';
 import ReactGA from 'react-ga';
@@ -18,10 +19,6 @@ function Project() {
     const employer = employersFilter[0];
 
     useEffect(() => {
-        document.title = `${employer.title} @ ${employer.name} - Jarno van Wezel - Software Engineer - Rotterdam`;
-    }, [employer]);
-
-    useEffect(() => {
         ReactGA.pageview(window.location.pathname);
 
         fetch(`/locales/nl/employers/${slug}.md`).then(response => {
@@ -29,12 +26,12 @@ function Project() {
         });
     }, [slug]);
 
-    const Content = <>
+    const content = <>
         {description && <ReactMarkdown source={description} />}
         {!description && <p>{t('projects.loading')}</p>}
     </>;
 
-    const Sidebar = <>
+    const sidebar = <>
         {employer.techstack && <>
             <h4>{t('projects.tech-stack')}</h4>
             <ul className="list-inline">
@@ -57,8 +54,12 @@ function Project() {
     return (<Page
         title={employer.name}
         subtitle={employer.title}
-        content={Content}
-        sidebar={Sidebar}>
+        content={content}
+        description={description}
+        sidebar={sidebar}>
+        <Helmet>
+            <title>{`${employer.name} @ ${employer.title} - Jarno van Wezel - Software Engineer - Rotterdam`}</title>
+        </Helmet>
         <Portfolio items={ProjectsMapped.filter(project => project.employerSlug === slug)} />
     </Page>);
 }

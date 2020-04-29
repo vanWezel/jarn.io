@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 
 import Intro from '../sections/Intro';
 import Experience from '../sections/Experience';
@@ -10,10 +11,14 @@ import './Home.css';
 function Home() {
     useEffect(() => {
         ReactGA.pageview(window.location.pathname);
-        document.title = 'Jarno van Wezel - Software Engineer - Rotterdam';
     });
 
     return (<main>
+        <Helmet>
+            <title>Jarno van Wezel - Software Engineer - Rotterdam</title>
+            <meta name="description" content="Hoi, ik ben Jarno. Een Software Engineer uit Rotterdam. Welkom op mijn digitale cv!" />
+        </Helmet>
+
         <Intro />
 
         <Experience />

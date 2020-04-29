@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory, useParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import ReactMarkdown from 'react-markdown'
 import { Bounce } from 'react-awesome-reveal';
 import ReactGA from 'react-ga';
-import { Link } from 'react-router-dom';
 
 import Page from './Page';
 import Portfolio from '../components/Portfolio';
@@ -33,10 +33,6 @@ function Project() {
     });
     
     const project = projectsFiltered[0];
-    
-    useEffect(() => {
-        document.title = `${project.name} @ ${project.employer} - Jarno van Wezel - Software Engineer - Rotterdam`;
-    }, [project]);
 
     useEffect(() => {
         ReactGA.pageview(window.location.pathname);
@@ -46,12 +42,12 @@ function Project() {
         });
     }, [employerSlug, slug]);
 
-    const Content = <>
+    const content = <>
         {description && <ReactMarkdown source={description} />}
         {!description && <p>{t('projects.loading')}</p>}
     </>;
 
-    const Sidebar = <>
+    const sidebar = <>
         {project.techstack && <>
             <h4>{t('projects.tech-stack')}</h4>
             <ul className="list-inline">
@@ -74,8 +70,12 @@ function Project() {
     return (<Page
         title={project.name}
         subtitle={<Link to={`/employer/${project.employerSlug}`} title={project.employer}>{project.employer}</Link>}
-        content={Content}
-        sidebar={Sidebar}>
+        content={content}
+        description={description}
+        sidebar={sidebar}>
+        <Helmet>
+            <title>{`${project.name} @ ${project.employer} - Jarno van Wezel - Software Engineer - Rotterdam`}</title>
+        </Helmet>
         <Portfolio items={ProjectsMapped.filter(project => project.url !== history.location.pathname)} />
     </Page>);
 }
