@@ -36,6 +36,13 @@
                 "error": "Controleer of alle velden juist zijn ingevuld.",
                 "error-network": "Er is wat fout gegaan, probeer het later opnieuw."
             }
+        },
+        "chat": {
+            "name": "Wat is je naam?",
+            "email": "En je e-mailadres?",
+            "subject": "Wat is het onderwerp van je bericht?",
+            "message": "En wat wilde je me sturen?",
+            "thanks": "Thanks! Je hoort snel van me."
         }
     }
 }

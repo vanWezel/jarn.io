@@ -1,0 +1,43 @@
+@import '../../node_modules/conversational-form/src/styles/mixins/cf-mixins';
+
+$cf-base-font-size: 14px;
+
+$cf-color-background: #0E4B77;
+$cf-color-primary: #3281B9;
+$cf-color-secondary: #ffffff;
+$cf-color-error: #fe8d84;
+
+$cf-font-family: 'Baloo Paaji 2', cursive;
+
+@import '../../node_modules/conversational-form/src/styles/conversational-form';
+
+.conversational-form {
+    &,
+    cf-input .inputWrapper {
+        border-radius: 30px;
+        overflow: hidden;
+    }
+
+    cf-input input[rows="1"],
+    cf-input textarea[rows="1"] {
+        width: calc(100% - 47px);
+    }
+
+    cf-chat-response {
+        thumb {
+            background-color: transparent;
+        }
+
+        &.user {
+            padding-right: 0;
+            
+            thumb {
+                display: none;
+            }
+        }
+    }
+}
+
+form#contact-form {
+    opacity: 0;
+}
