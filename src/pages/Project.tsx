@@ -35,7 +35,7 @@ function Project() {
     const project = projectsFiltered[0];
     
     useEffect(() => {
-        document.title = `Project: ${project.name} - Jarno van Wezel - Software Engineer - Rotterdam`;
+        document.title = `${project.name} @ ${project.employer} - Jarno van Wezel - Software Engineer - Rotterdam`;
     }, [project]);
 
     useEffect(() => {

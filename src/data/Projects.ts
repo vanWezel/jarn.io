@@ -3,7 +3,7 @@ import Employers from "./Employers";
 const Projects = [
     {
         employerSlug: 'ict-group',
-        name: 'Merlion | PSA Antwerpen',
+        name: 'Merlion - PSA Antwerpen',
         url: '/project/ict-group/merlion',
         image: '/images/projects/ict-group/merlion.jpg',
         image2x: '/images/projects/ict-group/merlion@2x.jpg',
