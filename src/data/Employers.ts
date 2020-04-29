@@ -3,7 +3,7 @@ const Employers = [
         period: { start: '2020-05-01', end: '' },
         name: 'Tracefy',
         title: 'Developer',
-        slug: 'tracefy',
+        slug: '',
         techstack: ['PHP'],
         tools: ['Mac OS'],
     },
