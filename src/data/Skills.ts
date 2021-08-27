@@ -1,43 +1,39 @@
 const Skills = [
     {
-        name: 'PHP',
+        name: 'Go',
         value: 90
     },
     {
-        name: 'MySql',
+        name: 'MySql / SQL, Git',
         value: 90
     },
     {
-        name: 'Git',
+        name: 'Docker, Redis, Nats',
         value: 90
     },
     {
-        name: 'Typescript',
-        value: 90
-    },
-    {
-        name: 'React',
+        name: 'PHP, Laravel',
         value: 80
     },
     {
-        name: 'C# / .NET',
-        value: 80
+        name: 'Gitlab CI, Python',
+        value: 75
     },
     {
-        name: 'SQL',
-        value: 80
+        name: 'Node.js, Typescript, C# / .NET',
+        value: 70
     },
     {
-        name: 'Node.js',
-        value: 50
+        name: 'Dynamo DB, Firebase',
+        value: 65
     },
     {
-        name: 'Python',
-        value: 50
+        name: 'Typescript, Vue, React',
+        value: 55
     },
     {
-        name: 'Bash',
-        value: 50
+        name: 'React Native, Arduino',
+        value: 45
     },
 ];
 

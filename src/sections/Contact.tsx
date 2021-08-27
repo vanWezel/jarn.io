@@ -98,42 +98,52 @@ function Contact() {
                     <form id="contact-form" className="contact-form mt-6" method="post">
                         <div className="row">
                             <div className="column col-md-6">
-                                <div className="form-group">
-                                    <label htmlFor="input-name">{t('contact.form.name')}</label>
-                                    <input type="text" className="form-control" placeholder={t('contact.form.name')} name="name" id="input-name" onChange={updateValue}/>
-                                    <small className="form-text text-error">{errors['name']}</small>
-                                </div>
+                                <Fade direction="top" triggerOnce={true} >
+                                    <div className="form-group">
+                                        <label htmlFor="input-name">{t('contact.form.name')}</label>
+                                        <input type="text" className="form-control" placeholder={t('contact.form.name')} name="name" id="input-name" onChange={updateValue}/>
+                                        <small className="form-text text-error">{errors['name']}</small>
+                                    </div>
+                                </Fade>
                             </div>
 
                             <div className="column col-md-6">
                                 <div className="form-group">
-                                    <label htmlFor="input-email">{t('contact.form.email')}</label>
-                                    <input type="email" className="form-control" placeholder={t('contact.form.email')} name="email" id="input-email" onChange={updateValue}/>
-                                    <small className="form-text text-error">{errors['email']}</small>
+                                    <Fade direction="top" triggerOnce={true} >
+                                        <label htmlFor="input-email">{t('contact.form.email')}</label>
+                                        <input type="email" className="form-control" placeholder={t('contact.form.email')} name="email" id="input-email" onChange={updateValue}/>
+                                        <small className="form-text text-error">{errors['email']}</small>
+                                    </Fade>
                                 </div>
                             </div>
 
                             <div className="column col-md-12">
                                 <div className="form-group">
-                                    <label htmlFor="input-subject">{t('contact.form.subject')}</label>
-                                    <input type="text" className="form-control" placeholder={t('contact.form.subject')} name ="subject" onChange={updateValue}/>
-                                    <small className="form-text text-error">{errors['subject']}</small>
+                                    <Fade direction="top" triggerOnce={true} >
+                                        <label htmlFor="input-subject">{t('contact.form.subject')}</label>
+                                        <input type="text" className="form-control" placeholder={t('contact.form.subject')} name ="subject" onChange={updateValue}/>
+                                        <small className="form-text text-error">{errors['subject']}</small>
+                                    </Fade>
                                 </div>
                             </div>
 
                             <div className="column col-md-12">
                                 <div className="form-group">
-                                    <label htmlFor="input-message">{t('contact.form.message')}</label>
-                                    <textarea className="form-control" rows={5} placeholder={t('contact.form.message')} name="message" id="mesinput-sage" onChange={updateValue}>
-                                    </textarea>
-                                    <small className="form-text text-error">{errors['message']}</small>
+                                    <Fade direction="top" triggerOnce={true} >
+                                        <label htmlFor="input-message">{t('contact.form.message')}</label>
+                                        <textarea className="form-control" rows={5} placeholder={t('contact.form.message')} name="message" id="mesinput-sage" onChange={updateValue}>
+                                        </textarea>
+                                        <small className="form-text text-error">{errors['message']}</small>
+                                    </Fade>
                                 </div>
                             </div>
                         </div>
 
-                        <button type="submit" name="submit" id="submit" value="Submit" className="btn btn-default" onClick={sendMessage} disabled={buttonText.length > 0}>
-                           {buttonText ? buttonText : t('contact.form.button.default')}
-                        </button>
+                        <Fade direction="top" triggerOnce={true} >
+                            <button type="submit" name="submit" id="submit" value="Submit" className="btn btn-default" onClick={sendMessage} disabled={buttonText.length > 0}>
+                               {buttonText ? buttonText : t('contact.form.button.default')}
+                            </button>
+                        </Fade>
                     </form>
                 </div>
             </div>

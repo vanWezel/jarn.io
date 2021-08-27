@@ -11,11 +11,13 @@
         }
     },
     "experience": "Werkervaring, opleiding & skills",
+    "view-employer": "Bekijk de website",
     "projects": {
         "title": "Mijn Projecten",
         "tech-stack": "Tech stack",
         "tools": "Tools",
-        "loading": "Momentje..."
+        "loading": "Momentje...",
+        "view": "Bekijk project"
     },
     "contact": {
         "title": "Wil je samenwerken of heb je vragen?",

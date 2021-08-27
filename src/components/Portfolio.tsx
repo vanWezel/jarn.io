@@ -10,7 +10,7 @@ export interface PortfolioItem {
     employer: string;
     employerSlug: string;
     url: string;
-    techstack?: string[];
+    stack?: string[];
     tools?: string[];
     image: string;
     image2x: string;
@@ -72,18 +72,20 @@ const Portfolio = (props: PortfolioProps) => {
 
         <div className="row portfolio-wrapper">
             {props.items.map((item, index) => <div key={index} className={`col-lg-4 col-sm-6 grid-item ${item.employerSlug}`}>
-                <Link to={item.url} className="work-content" title={item.name}>
-                    <div className="portfolio-item rounded ">
-                        <div className="details">
-                            <span className="term">{item.employer}</span>
-                            <h4 className="title">{item.name}</h4>
+                <Fade direction="top" triggerOnce={true}>
+                    <Link to={item.url} className="work-content" title={item.name}>
+                        <div className="portfolio-item rounded ">
+                            <div className="details">
+                                <span className="term">{item.employer}</span>
+                                <h4 className="title">{item.name}</h4>
+                            </div>
+                            <div className="thumb">
+                                <img src={item.image} srcSet={`${item.image}, ${item.image2x} 2x`} alt={item.name} />
+                                <div className="mask"></div>
+                            </div>
                         </div>
-                        <div className="thumb">
-                            <img src={item.image} srcSet={`${item.image}, ${item.image2x} 2x`} alt={item.name} />
-                            <div className="mask"></div>
-                        </div>
-                    </div>
-                </Link>
+                    </Link>
+                </Fade>
             </div>)}
         </div>
     </React.Fragment>);

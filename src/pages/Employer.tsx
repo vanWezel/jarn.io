@@ -22,21 +22,24 @@ function Project() {
         ReactGA.pageview(window.location.pathname);
 
         fetch(`/locales/nl/employers/${slug}.md`).then(response => {
-            response.text().then(text => setDescription(text));
+            response.text().then(text => {
+                console.log(text)
+                setDescription(text)
+            });
         });
     }, [slug]);
 
     const content = <>
-        {description && <ReactMarkdown source={description} />}
+        {description && <ReactMarkdown>{description}</ReactMarkdown>}
         {!description && <p>{t('projects.loading')}</p>}
     </>;
 
     const sidebar = <>
-        {employer.techstack && <>
+        {employer.stack && <>
             <h4>{t('projects.tech-stack')}</h4>
             <ul className="list-inline">
                 <Bounce cascade triggerOnce damping={0.1}>
-                    {employer.techstack.map((item, index) => <li key={index} className="list-inline-item rounded list-item-bg">{item}</li>)}
+                    {employer.stack.map((item, index) => <li key={index} className="list-inline-item rounded list-item-bg">{item}</li>)}
                 </Bounce>
             </ul>
         </>}
@@ -55,6 +58,7 @@ function Project() {
         title={employer.name}
         subtitle={employer.title}
         content={content}
+        link={employer.link}
         description={description}
         sidebar={sidebar}>
         <Helmet>

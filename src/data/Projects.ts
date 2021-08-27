@@ -14,7 +14,7 @@ const Projects = [
         url: '/project/webnl/expeditie-haringvliet',
         image: '/images/projects/webnl/expeditie-haringvliet.jpg',
         image2x: '/images/projects/webnl/expeditie-haringvliet@2x.jpg',
-        extraTechstack: ['Laravel', 'vue.js', 'Amazon AWS S3']
+        extrastack: ['Laravel', 'vue.js', 'Amazon AWS S3']
     }, 
     {
         employerSlug: 'webnl',
@@ -22,7 +22,7 @@ const Projects = [
         url: '/project/webnl/vakantiehuistekoop',
         image: '/images/projects/webnl/vakantiehuistekoop.jpg',
         image2x: '/images/projects/webnl/vakantiehuistekoop@2x.jpg',
-        extraTechstack: ['Laravel', 'vue.js', 'Amazon AWS S3']
+        extrastack: ['Laravel', 'vue.js', 'Amazon AWS S3']
     }, 
     {
         employerSlug: 'webnl',
@@ -30,7 +30,7 @@ const Projects = [
         url: '/project/webnl/thegreencloud',
         image: '/images/projects/webnl/thegreencloud.jpg',
         image2x: '/images/projects/webnl/thegreencloud@2x.jpg',
-        extraTechstack: ['Laravel', 'vue.js', 'Exact Online', 'Amazon AWS S3']
+        extrastack: ['Laravel', 'vue.js', 'Exact Online', 'Amazon AWS S3']
     }, 
     {
         employerSlug: 'webnl',
@@ -38,7 +38,7 @@ const Projects = [
         url: '/project/webnl/fst-group',
         image: '/images/projects/webnl/fst-group.jpg',
         image2x: '/images/projects/webnl/fst-group@2x.jpg',
-        extraTechstack: ['Zend Framework', 'jQuery'],
+        extrastack: ['Zend Framework', 'jQuery'],
     }, 
     {
         employerSlug: 'webnl',
@@ -47,7 +47,7 @@ const Projects = [
         image: '/images/projects/webnl/site-launch.jpg',
         image2x: '/images/projects/webnl/site-launch@2x.jpg',
         tools: ['Raspberry PI', 'Debian'],
-        techstack: ['PHP', 'Python', 'Node.js', 'Socket.io'],
+        stack: ['PHP', 'Python', 'Node.js', 'Socket.io'],
     },
 ];
 
@@ -59,7 +59,7 @@ export const ProjectsMapped = Projects.map(project => {
         employer: employer ? employer.name : '',
         employerSlug: employer ? employer.slug : '',
         url: project.url,
-        techstack: employer ? employer.techstack : [],
+        stack: employer ? employer.stack : [],
         tools: employer ? employer.tools : [],
         image: project.image,
         image2x: project.image2x

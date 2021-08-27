@@ -49,9 +49,18 @@
 
 .list-item-bg {
     color: white;
-    background: #3281B9;
+    background: #889c84;
     padding: 1px 10px;
     margin-bottom: 0.5em;
+}
+
+.page-content a:hover {
+    color: #889c84;
+}
+
+.site-link {
+    display: inline-block;
+    margin-top: 2rem;
 }
 
 @media only screen and (min-width: 1200px) {

@@ -41,7 +41,7 @@
 
 .portfolio-item .details span.term {
     color: #FFF;
-    background: #3281B9;
+    background: #889c84;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     font-size: 14px;
@@ -56,7 +56,7 @@
 }
 
 .portfolio-item .mask {
-    background: #1B262C;
+    background: #292f28;
     position: absolute;
     left: 0;
     top: 0;
@@ -93,11 +93,11 @@
 }
 
 .portfolio-filter li:hover {
-    color: #3281B9;
+    color: #889c84;
 }
 
 .portfolio-filter li.current {
-    color: #3281B9;
+    color: #889c84;
 }
 
 .portfolio-filter li:not(:last-child) {

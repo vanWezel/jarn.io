@@ -32,7 +32,7 @@ function Timeline(props: TimelineProps) {
             return date;
         }
 
-        return moment(date).format('MMM YY');
+        return moment(date).format('MMM \'YY');
     }
 
     return (<Fade cascade direction="top" triggerOnce={true}>

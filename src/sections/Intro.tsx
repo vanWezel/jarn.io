@@ -1,7 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faCodepen } from '@fortawesome/free-brands-svg-icons';
 import Typist from 'react-typist';
 import 'react-typist/src/Cursor.scss';
 
@@ -33,10 +31,6 @@ function Intro() {
                                 <span>{t('bubble.part3')}</span>
                             </Typist>}
                         </h1>
-
-                        <div className="mt-4">
-                            <a href="/files/cv.pdf" download="CV - Jarno van Wezel.pdf" className="btn btn-default">Download CV</a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -46,24 +40,14 @@ function Intro() {
                     <ul className="social-icons light list-inline mb-0 mt-4">
                         <li className="list-inline-item">
                             <a target="_blank" rel="noopener noreferrer" title="Let's connect!" href="https://www.linkedin.com/in/jarnovwezel/">
-                                <FontAwesomeIcon icon={faLinkedin} />
+                                <i className="icon-social-linkedin"></i>
                             </a>
                         </li>
                         <li className="list-inline-item">
                             <a target="_blank" rel="noopener noreferrer" title="Let's collab!" href="https://github.com/vanwezel">
-                                <FontAwesomeIcon icon={faGithub} />
+                                <i className="icon-social-github"></i>
                             </a>
                         </li>
-                        <li className="list-inline-item">
-                            <a target="_blank" rel="noopener noreferrer" title="Let's connect!" href="https://codepen.io/vanwezel">
-                                <FontAwesomeIcon icon={faCodepen} />
-                            </a>
-                        </li>
-                        {/* <li className="list-inline-item">
-                            <a target="_blank" rel="noopener noreferrer" href="https://www.hackerrank.com/jarnio">
-                                <FontAwesomeIcon icon={faHackerrank} />
-                            </a>
-                        </li> */}
                     </ul>
                 </div>
             </div>

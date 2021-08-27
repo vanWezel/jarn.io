@@ -18,11 +18,11 @@ function Project() {
     const history = useHistory();
     const projectsFiltered = Projects.filter(item => item.url === history.location.pathname).map(item => {
         const employer = Employers.filter(item => item.slug === employerSlug)[0];
-        const techstack = item.techstack ? item.techstack : item.extraTechstack ? employer.techstack.concat(item.extraTechstack) : employer.techstack;
+        const stack = item.stack ? item.stack : item.extrastack ? employer.stack.concat(item.extrastack) : employer.stack;
         const tools = item.tools ? item.tools : employer.tools;
 
         return {
-            techstack,
+            stack,
             tools,
             employer: employer.name,
             employerSlug: employer.slug,
@@ -48,11 +48,11 @@ function Project() {
     </>;
 
     const sidebar = <>
-        {project.techstack && <>
+        {project.stack && <>
             <h4>{t('projects.tech-stack')}</h4>
             <ul className="list-inline">
                 <Bounce cascade triggerOnce damping={0.1}>
-                    {project.techstack.map((item, index) => <li key={index} className="list-inline-item rounded list-item-bg">{item}</li>)}
+                    {project.stack.map((item, index) => <li key={index} className="list-inline-item rounded list-item-bg">{item}</li>)}
                 </Bounce>
             </ul>
         </>}

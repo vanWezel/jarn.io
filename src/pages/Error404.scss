@@ -111,7 +111,7 @@
 }
 
 .error {
-    color: #3281B9;
+    color: #889c84;
     font-size: 1.4em;
     height: 100vh;
     font-size: 1.5rem;
@@ -125,7 +125,7 @@
         margin: 0;
         text-transform: uppercase;
         font-size: 1.1em;
-        color: #3281B9;
+        color: #889c84;
     }
 
     p {
@@ -212,7 +212,7 @@
     a {
         background: transparent;
         clear: both;
-        color: #3281B9;
+        color: #889c84;
         cursor: hand;
         display: inline-block;
         font-size: 1em;
@@ -222,7 +222,7 @@
         z-index: 10;
 
         &:hover {
-            background: #3281B9;
+            background: #889c84;
             color: #383838;
             opacity: 0.8;
         }
@@ -233,7 +233,7 @@
 
         &::before,
         &::after {
-            color: #3281B9;
+            color: #889c84;
         }
 
         &::before {
