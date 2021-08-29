@@ -1,1 +1,43 @@
-{}
+{
+  "bubble": {
+    "part1": "Hi, I’m Jarno, a software engineer based in Rotterdam.",
+    "part2": "In my free time you can find me wandering in the woods with my favourite [doge](https://www.instagram.com/shibabooboo/?hl=en), reading books or just drinking Belgian beers with my friends.",
+    "part3": "Thanks for stopping by! Scroll down to check out the projects I’ve been working on."
+  },
+  "now": "Now",
+  "portfolio": {
+    "filter": {
+      "all": "All"
+    }
+  },
+  "experience": "Experience, education & skills",
+  "view-employer": "View the website",
+  "projects": {
+    "title": "The projects I’ve worked on",
+    "tech-stack": "Tech stack",
+    "tools": "Tools",
+    "loading": "Just a sec...",
+    "view": "View project"
+  },
+  "contact": {
+    "title": "Do you have questions or are you interested in a collaboration?",
+    "subtitle": "Don’t hesitate to reach out.",
+    "form": {
+      "name": "Name",
+      "email": "E-mail",
+      "subject": "Subject",
+      "message": "Message",
+      "errors": {
+        "required": "This is a required field",
+        "email": "This isn't a valid e-mail"
+      },
+      "button": {
+        "default": "Send",
+        "sending": "Sending...",
+        "send": "Message sent!",
+        "error": "Check all fields are filled in correctly.",
+        "error-network": "Whoops there went something wrong, please try again."
+      }
+    }
+  }
+}

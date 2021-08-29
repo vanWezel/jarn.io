@@ -41,7 +41,7 @@ function Contact() {
             for (const index in fields) {
                 const name = fields[index];
                 if (!(name in values) || ((name === 'email' && !validEmail(values[name])) || values[name].length < 2)) {
-                    _errors[name] = t(`contact.form.errors.${(name === 'email' && !validEmail(values[name])) ? 'email' : 'requierd'}`);
+                    _errors[name] = t(`contact.form.errors.${(name === 'email' && !validEmail(values[name])) ? 'email' : 'required'}`);
                 }
             }
             

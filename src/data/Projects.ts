@@ -2,12 +2,33 @@ import Employers from "./Employers";
 
 const Projects = [
     {
+        employerSlug: 'tracefy',
+        name: 'Slack Bot',
+        url: '/project/tracefy/slack-bot',
+        image: '/images/projects/tracefy.jpg',
+        image2x: '/images/projects/tracefy@2x.jpg',
+    },
+    {
+        employerSlug: 'tracefy',
+        name: 'Migratie',
+        url: '/project/tracefy/migration',
+        image: '/images/projects/tracefy.jpg',
+        image2x: '/images/projects/tracefy@2x.jpg',
+    },
+    {
+        employerSlug: 'tracefy',
+        name: 'Socket Service',
+        url: '/project/tracefy/socket-service',
+        image: '/images/projects/tracefy.jpg',
+        image2x: '/images/projects/tracefy@2x.jpg',
+    },
+    {
         employerSlug: 'ict-group',
         name: 'Merlion - PSA Antwerpen',
         url: '/project/ict-group/merlion',
         image: '/images/projects/ict-group/merlion.jpg',
         image2x: '/images/projects/ict-group/merlion@2x.jpg',
-    }, 
+    },
     {
         employerSlug: 'webnl',
         name: 'Expeditie Haringvliet',

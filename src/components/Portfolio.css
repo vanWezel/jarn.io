@@ -19,6 +19,7 @@
 
 .portfolio-item .thumb img {
     display: block;
+    opacity: 0.25;
 }
 
 .portfolio-item .details {

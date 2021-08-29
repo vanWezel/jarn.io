@@ -6,7 +6,9 @@ import './Header.css';
 
 function Header() {
     const match = useRouteMatch();
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const language = i18n.language === 'en-US' ? 'NL' : 'EN';
+    const to = language === 'NL' ? 'nl-NL' : 'en-US';
 
     return (<header className="desktop-header-2 d-flex align-items-start flex-column justify-content-between">
         <nav>
@@ -16,13 +18,14 @@ function Header() {
                     <li><AnchorLink href="#home" title="Home"><i className="icon-home"></i></AnchorLink></li>
                     <li><AnchorLink href="#experience" title={t('experience')}><i className="icon-briefcase"></i></AnchorLink></li>
                     <li><AnchorLink href="#projects" title={t('projects.title')}><i className="icon-grid"></i></AnchorLink></li>
-                    <li><AnchorLink href="#contact" title={t('contact.title')}><i className="icon-bubbles"></i></AnchorLink></li>
+                    <li><AnchorLink href="#contact" title={t('contact.title')}><i className="icon-envelope-open"></i></AnchorLink></li>
                 </>}
             </ul>
         </nav>
 
         <div className="footer">
             <span className="copyright">© 2021 Jarno van Wezel</span>
+            <a onClick={() => i18n.changeLanguage(to)} className='language-switch'>{language}</a>
         </div>
     </header>);
 }

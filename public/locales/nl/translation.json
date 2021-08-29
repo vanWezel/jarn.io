@@ -1,7 +1,7 @@
 {
     "bubble": {
         "part1": "Hoi, ik ben Jarno. Een Software Engineer uit Rotterdam.",
-        "part2": "In mijn vrije tijd zoek ik de natuur op met mijn hond en op gezellige avondjes prikkel ik graag mijn smaakpapillen met speciaal biertjes.",
+        "part2": "In mijn vrije tijd zoek ik de natuur op met mijn [hond](https://www.instagram.com/shibabooboo/?hl=en) en op gezellige avondjes prikkel ik graag mijn smaakpapillen met speciaal biertjes.",
         "part3": "Leuk dat je op mijn website bent geland. Ik update je graag over mijn werkervaring en skills. Scrollen maar! :-)"
     },
     "now": "Nu",
@@ -28,7 +28,7 @@
             "subject": "Onderwerp",
             "message": "Bericht",
             "errors": {
-                "requierd": "Dit is een verplicht veld",
+                "required": "Dit is een verplicht veld",
                 "email": "Dit is geen geldig e-mailadres"
             },
             "button": {

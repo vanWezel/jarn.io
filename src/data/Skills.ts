@@ -9,7 +9,7 @@ const Skills = [
     },
     {
         name: 'Docker, Redis, Nats',
-        value: 90
+        value: 85
     },
     {
         name: 'PHP, Laravel',

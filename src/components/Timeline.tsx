@@ -38,12 +38,16 @@ function Timeline(props: TimelineProps) {
     return (<Fade cascade direction="top" triggerOnce={true}>
         <div className={`timeline -${props.type} bg-dark rounded padding-30 overflow-hidden`}>
             <span className="line"></span>
+
             {props.items.map((item, index) => {
-                const Content = <>
-                    <span className="time">{format(item.period.start)} - {format(item.period.end)}</span>
-                    <h3 className="title">{item.name}</h3>
-                    <p>{item.location}</p>
-                </>;
+                const Content = <div className="d-flex align-items-center justify-content-between">
+                    <div>
+                        <span className="time">{format(item.period.start)} - {format(item.period.end)}</span>
+                        <h3 className="title">{item.name}</h3>
+                        <p>{item.location}</p>
+                    </div>
+                    {item.url && <i className="icon-arrow-right"></i>}
+                </div>;
 
                 return (<div key={index} className="timeline-container">
                     {item.url && <Link className="content" to={item.url} title={item.name}>{Content}</Link>}

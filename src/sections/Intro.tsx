@@ -1,12 +1,13 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import Typist from 'react-typist';
-import 'react-typist/src/Cursor.scss';
+import {Fade} from "react-awesome-reveal";
+import {OutboundLink} from "react-ga";
+import ReactMarkdown from "react-markdown";
 
 function Intro() {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { t, i18n, ready } = useTranslation();
-    
+    const { t } = useTranslation();
+    const lines = [1,2,3];
+
     return (<section id="home">
         <div className="container">
             <div className="row align-items-top">
@@ -16,22 +17,12 @@ function Intro() {
                     </div>
                 </div>
 
-                <div className="col-md-9 triangle-left-md triangle-top-sm">
-                    <div className="chat rounded bg-light">
-                        <h1>
-                            {ready && <Typist>
-                                <span>{t('bubble.part1')}</span>
-                                <Typist.Delay ms={1500} />
-                                <br />
-                                <br />
-                                <span>{t('bubble.part2')}</span>
-                                <Typist.Delay ms={1500} />
-                                <br />
-                                <br />
-                                <span>{t('bubble.part3')}</span>
-                            </Typist>}
-                        </h1>
-                    </div>
+                <div className="col-md-9">
+                    {lines.map((i, line) => <Fade direction="top" triggerOnce={true} delay={( i > 1 ? i * 300 : 0)}>
+                        <span className={`chat bg-light ${i === 3 ? 'triangle-top-sm triangle-left-md' : ''}`}>
+                            <ReactMarkdown source={t(`bubble.part${i}`)} renderers={{link: props => <a href={props.href} target="_blank">{props.children}</a>}}/>
+                        </span>
+                    </Fade>)}
                 </div>
             </div>
 

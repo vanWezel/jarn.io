@@ -16,8 +16,7 @@ interface PageProps {
 }
 
 function Page(props: PageProps) {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { t, i18n, ready } = useTranslation();
+    const { t } = useTranslation();
 
     return (<main>
         <Helmet>

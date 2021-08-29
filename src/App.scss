@@ -1,3 +1,4 @@
+
 @import '../node_modules//bootstrap/scss/mixins';
 @import '../node_modules//bootstrap/scss/bootstrap-grid';
 
@@ -339,7 +340,7 @@ textarea {
 
 /* === Helper === */
 .rounded {
-  border-radius: 20px !important;
+  border-radius: 7px !important;
 }
 
 .padding-30 {
@@ -396,16 +397,20 @@ textarea {
     max-width: 920px;
   }
 
-  .triangle-left-md:before {
-    content: "";
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 15px solid #f8f9fa;
-    position: absolute;
-    left: 0;
-    top: 20%;
+  .triangle-left-md {
+    &:before {
+      transform: rotate(5deg);
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 0 solid transparent;
+      border-bottom: 15px solid transparent;
+      border-right: 20px solid #f8f9fa;
+      position: absolute;
+      left: -10px;
+      top: 15px;
+      z-index: -1;
+    }
   }
 }
 
@@ -419,4 +424,10 @@ textarea {
   .container {
     max-width: 1080px;
   }
+}
+
+.language-switch {
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 1rem;
 }

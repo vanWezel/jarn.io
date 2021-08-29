@@ -13,7 +13,7 @@ import Employers from '../data/Employers';
 
 function Project() {
     const { employerSlug, slug } = useParams();
-    const { t } = useTranslation();
+    const { t, i18n, ready } = useTranslation();
     const [description, setDescription] = useState('');
     const history = useHistory();
     const projectsFiltered = Projects.filter(item => item.url === history.location.pathname).map(item => {
@@ -35,12 +35,21 @@ function Project() {
     const project = projectsFiltered[0];
 
     useEffect(() => {
+        if (!ready) {
+            return;
+        }
+
         ReactGA.pageview(window.location.pathname);
 
-        fetch(`/locales/nl/projects/${employerSlug}/${slug}.md`).then(response => {
+        let language = 'nl';
+        if (i18n.language === 'en-US') {
+            language = 'en';
+        }
+
+        fetch(`/locales/${language}/projects/${employerSlug}/${slug}.md`).then(response => {
             response.text().then(text => setDescription(text));
         });
-    }, [employerSlug, slug]);
+    }, [employerSlug, slug, i18n.language, ready]);
 
     const content = <>
         {description && <ReactMarkdown source={description} />}

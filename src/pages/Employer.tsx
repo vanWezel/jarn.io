@@ -13,21 +13,29 @@ import Portfolio from '../components/Portfolio';
 
 function Project() {
     const { slug } = useParams();
-    const { t } = useTranslation();
+    const { t, i18n, ready } = useTranslation();
     const [description, setDescription] = useState('');
     const employersFilter = Employers.filter(employer => employer.slug === slug);
     const employer = employersFilter[0];
 
     useEffect(() => {
+        if (!ready) {
+            return;
+        }
+
         ReactGA.pageview(window.location.pathname);
 
-        fetch(`/locales/nl/employers/${slug}.md`).then(response => {
+        let language = 'nl';
+        if (i18n.language === 'en-US') {
+            language = 'en';
+        }
+
+        fetch(`/locales/${language}/employers/${slug}.md`).then(response => {
             response.text().then(text => {
-                console.log(text)
                 setDescription(text)
             });
         });
-    }, [slug]);
+    }, [slug, i18n.language, ready]);
 
     const content = <>
         {description && <ReactMarkdown>{description}</ReactMarkdown>}
