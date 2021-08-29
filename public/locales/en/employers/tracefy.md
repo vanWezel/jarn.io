@@ -2,11 +2,11 @@ At Tracefy I worked at the further development of the fleet management system. W
 
 My achievements:
 - Managing the tech team
-- [Development of a new socket service](/project/tracefy/socket-service)
-- [Development of several stress tests](/project/tracefy/socket-service)
-- [Development of a Slack-bot for back office related tasks](/project/tracefy/slack-bot)
-- [The writing of several migration scripts to transfer big chunks of data in the most efficient way](/project/tracefy/migration)
-- [Real-time (location) updates for several front-end applications](/project/tracefy/realtime-updates)
+- [Development of a new socket service](project/tracefy/socket-service)
+- [Development of several stress tests](project/tracefy/socket-service)
+- [Development of a Slack-bot for back office related tasks](project/tracefy/slack-bot)
+- [The writing of several migration scripts to transfer big chunks of data in the most efficient way](project/tracefy/migration)
+- [Real-time (location) updates for several front-end applications](project/tracefy/realtime-updates)
 - Development of automatic deploy pipelines
 - Rebuilding legacy code into new code to lower the overall system load
 - Development of a (React) native IOS application

@@ -25,7 +25,7 @@ function Header() {
 
         <div className="footer">
             <span className="copyright">© 2021 Jarno van Wezel</span>
-            <a onClick={() => i18n.changeLanguage(to)} className='language-switch'>{language}</a>
+            <Link onClick={() => i18n.changeLanguage(to)} className='language-switch'>{language}</Link>
         </div>
     </header>);
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import {Fade} from "react-awesome-reveal";
-import {OutboundLink} from "react-ga";
 import ReactMarkdown from "react-markdown";
 
 function Intro() {
@@ -20,6 +19,7 @@ function Intro() {
                 <div className="col-md-9">
                     {lines.map((i, line) => <Fade direction="top" triggerOnce={true} delay={( i > 1 ? i * 300 : 0)}>
                         <span className={`chat bg-light ${i === 3 ? 'triangle-left-md' : ''} ${i === 1 ? 'triangle-top-sm' : ''}`}>
+                            {/* eslint-disable-next-line react/jsx-no-target-blank */}
                             <ReactMarkdown source={t(`bubble.part${i}`)} renderers={{link: props => <a href={props.href} target="_blank">{props.children}</a>}}/>
                         </span>
                     </Fade>)}

@@ -2,11 +2,11 @@ Bij Tracefy heb ik het vlootbeheer systeem verder ontwikkeld. De focus ligt hier
 
 Mijn prestaties:
 - Leiding geven aan het technische team
-- [Nieuwe socket service ontworpen en geschreven](/project/tracefy/socket-service)
-- [Verschillende stresstesten geschreven](/project/tracefy/socket-service)
-- [Een Slack-bot ontwikkeld voor backoffice gerelateerde taken](/project/tracefy/slack-bot)
-- [Verschillende migratie scripts geschreven](/project/tracefy/migration)
-- [Real-time (locatie) updates voor de verschillende front-end applicaties](/project/tracefy/realtime-updates)
+- [Nieuwe socket service ontworpen en geschreven](project/tracefy/socket-service)
+- [Verschillende stresstesten geschreven](project/tracefy/socket-service)
+- [Een Slack-bot ontwikkeld voor backoffice gerelateerde taken](project/tracefy/slack-bot)
+- [Verschillende migratie scripts geschreven](project/tracefy/migration)
+- [Real-time (locatie) updates voor de verschillende front-end applicaties](project/tracefy/realtime-updates)
 - Geautomatiseerde deploy pipelines geschreven
 - Het nabouwen van legacy code in nieuwe code om de algehele load van het systeem te verlagen
 - Een (React) native IOS-applicatie geschreven
