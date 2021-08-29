@@ -17,9 +17,8 @@ section .social-icons li a {
 .chat {
     padding: 5px 10px;
     margin-bottom: 5px;
-    display: inline-block;
+    display: block;
     border-radius: 20px;
-    max-width: 80%;
 }
 
 .chat h1 {
@@ -54,6 +53,11 @@ section .social-icons li a {
     .avatar {
         max-width: 100%;
         margin-bottom: 0;
+    }
+
+    .chat {
+        display: inline-block;
+        max-width: 80%;
     }
 
     .social-icons {
