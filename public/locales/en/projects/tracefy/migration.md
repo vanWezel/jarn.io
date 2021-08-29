@@ -1,0 +1,7 @@
+For the migration to AWS, the services had to be transferred. In order to achieve this as well as possible, I have developed several solutions.
+
+When I started out at Tracefy, all messages were stored in a MySql table. MySql can handle less than 6 million rows. That's why we had a script that transferred the older messages to another MySql (as a kind of backup). This table has grown to over 300 million rows. To empty it quickly, I developed a self-monitoring pump. This pump retrieved the messages from the database as quickly as possible and then uploaded them to an S3 bucket. If the disk was full, the script automatically scales to fewer download processes and uploads faster. To make the download process as fast as possible, I optimized the entire database for reading and deleting records. The pump is written in Python. For the downloader I had to use PHP, because that was already the language of the decoder. The upload was done with Amazon's AWS container.
+
+To avoid this problem in the new environment, I came up with the idea to convert the current trip logic to DynamoDB. This way, the MySql remained a lot smaller and therefore cheaper. Together with the team I converted the trip logic from PHP to Go. This allowed us to turn off six physical machines.
+
+Furthermore, we have split the large API container into small specialized services. In this way the end user did not notice the switch and we had all the time to migrate to the new database quietly.

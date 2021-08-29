@@ -1,0 +1,1 @@
+Fett Digital is a creative agency that focuses on sustainable entrepreneurs and changemakers, founded by my partner. In addition to other branding related services, together we develop eco-friendly websites for green entrepreneurs. The websites are created in WordPress and are fully customizable by the customer. I support where necessary with my coding skills.

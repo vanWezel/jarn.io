@@ -1,0 +1,1 @@
+During my college days, I started a company with a friend to earn some extra money and to keep developing myself. During the time we worked under the name Wesoft, we have developed websites for, among other things, a catering facility, a karate school and a barber.

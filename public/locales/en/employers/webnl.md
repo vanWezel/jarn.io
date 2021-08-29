@@ -1,0 +1,1 @@
+At WebNL creative studios I gained experience in custom solutions for the web in combination with a custom cms. I was working as a full stack developer, with a focus on back-end. I would like to highlight a few educational projects below:

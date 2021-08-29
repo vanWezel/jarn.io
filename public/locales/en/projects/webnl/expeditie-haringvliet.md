@@ -1,0 +1,5 @@
+Expeditie Haringvliet is een initiatief van de gemeente Goeree-Overflakkee en is een verzamelsite van meerdere bedrijven die rondvaarten aanbieden. De rondvaart routes, worden dus aangeboden door verschillende bedrijven en dit vereist een goede samenwerking. 
+
+Om deze samenwerking zo effectief en soepel mogelijk te maken voor de aangesloten bedrijven en de bezoekers heb ik een speciale module gemaakt binnen het cms. Deze module maakt het mogelijk voor de aangesloten bedrijven om de vertrektijden per boot en haven in te stellen. Vervolgens genereert het script automatisch de relevante opties voor de gebruiker. Hierin wordt ook rekening gehouden met de al gereserveerde rondvaarten en niet beschikbare periodes.
+
+Tevens moest de online betaling voor een gereserveerde rondvaart op de juiste accounts gestort worden van de juiste bedrijven. Ik heb dit per bedrijf opgelost door meerdere koppelingen met Mollie te maken.

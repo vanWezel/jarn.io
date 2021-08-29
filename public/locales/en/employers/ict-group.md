@@ -1,0 +1,1 @@
+ICT Group is a secondment agency that provides services within information and communication technology. Within the ICT group I gained experience as a full stack software engineer for PSA Antwerp, the largest container handler in the Port of Antwerp.

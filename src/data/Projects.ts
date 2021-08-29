@@ -10,7 +10,7 @@ const Projects = [
     },
     {
         employerSlug: 'tracefy',
-        name: 'Migratie',
+        name: 'AWS',
         url: '/project/tracefy/migration',
         image: '/images/projects/tracefy.jpg',
         image2x: '/images/projects/tracefy@2x.jpg',
@@ -63,7 +63,7 @@ const Projects = [
     }, 
     {
         employerSlug: 'webnl',
-        name: 'Site Launch Knop',
+        name: 'Site Launch',
         url: '/project/webnl/site-launch',
         image: '/images/projects/webnl/site-launch.jpg',
         image2x: '/images/projects/webnl/site-launch@2x.jpg',
