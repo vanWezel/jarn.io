@@ -10,7 +10,7 @@ function Header() {
     const language = i18n.language === 'en-US' ? 'NL' : 'EN';
     const to = language === 'NL' ? 'nl-NL' : 'en-US';
 
-    return (<header className="desktop-header-2 d-flex align-items-start flex-column justify-content-between">
+    return (<header className="desktop-header-2 d-flex align-items-start flex-column justify-content-between d-print-none">
         <nav>
             <ul className="vertical-menu scrollspy">
                 {!match.isExact && <li><Link to="/" title="Home"><i className="icon-home"></i></Link></li>}

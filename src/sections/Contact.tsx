@@ -77,7 +77,7 @@ function Contact() {
         }
     }
 
-    return (<section id="contact">
+    return (<section id="contact" className="d-print-none">
         <div className="container">
             <Fade direction="top" triggerOnce={true}>
                 <h2 className="section-title">{t('contact.title')}</h2>

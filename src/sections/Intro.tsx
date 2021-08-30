@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown";
 
 function Intro() {
     const { t } = useTranslation();
-    const lines = [1,2,3];
+    const lines = [1, 2, 3];
 
     return (<section id="home">
         <div className="container">
@@ -16,7 +16,7 @@ function Intro() {
                     </div>
                 </div>
 
-                <div className="col-md-9">
+                <div className="col-md-9 d-print-none">
                     {lines.map((i, line) => <Fade direction="top" triggerOnce={true} delay={( i > 1 ? i * 300 : 0)}>
                         <span className={`chat bg-light ${i === 3 ? 'triangle-left-md' : ''} ${i === 1 ? 'triangle-top-sm' : ''}`}>
                             {/* eslint-disable-next-line react/jsx-no-target-blank */}
@@ -26,7 +26,7 @@ function Intro() {
                 </div>
             </div>
 
-            <div className="row justify-content-end">
+            <div className="row justify-content-end d-print-none">
                 <div className="col-md-9">
                     <ul className="social-icons light list-inline mb-0 mt-4">
                         <li className="list-inline-item">

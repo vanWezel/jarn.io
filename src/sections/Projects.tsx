@@ -16,7 +16,7 @@ const filters = Employers.map(employer => {
 function Work() {
     const { t } = useTranslation();
 
-    return (<section id="projects">
+    return (<section id="projects" className="d-print-none">
         <div className="container">
             <Fade direction="top" triggerOnce={true}>
                 <h2 className="section-title">{t('projects.title')}</h2>
