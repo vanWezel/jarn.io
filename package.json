@@ -13,7 +13,7 @@
     "isotope-layout": "^3.0.6",
     "lottie-web": "^5.6.8",
     "moment": "^2.24.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-awesome-reveal": "^2.4.2",
