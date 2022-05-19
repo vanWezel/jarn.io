@@ -1,12 +1,12 @@
 const Employers = [
     {
         period: { start: '2021-06-01', end: '' },
-        name: 'Fett Digital',
-        title: 'Developer',
-        link: 'https://fett.digital',
-        slug: 'fett.digital',
-        stack: ['Wordpress', 'Php', 'MySql', 'Docker'],
-        tools: ['Mac OS', 'Visual Studio Code', 'Table Plus', 'Gitlab', 'Adobe XD'],
+        name: 'Root + Bloom Studio',
+        title: 'Code Alchemist',
+        link: 'https://rootandbloom.studio',
+        slug: 'root-bloom',
+        stack: ['Wordpress', 'Php', 'MySql', 'Docker', 'Laravel'],
+        tools: ['Mac OS', 'Adobe XD'],
     },
     {
         period: { start: '2020-05-01', end: '' },
