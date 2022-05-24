@@ -6,7 +6,7 @@ import Portfolio from '../components/Portfolio';
 import { ProjectsMapped } from '../data/Projects';
 import Employers from '../data/Employers';
 
-const filters = Employers.map(employer => {
+const filters = Employers.filter(employer => employer.hasOwnProperty('slug')).map(employer => {
     return {
         name: employer.name,
         className: employer.slug,

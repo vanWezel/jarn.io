@@ -50,7 +50,8 @@ function Timeline(props: TimelineProps) {
                 </div>;
 
                 return (<div key={index} className="timeline-container">
-                    {item.url && <Link className="content" to={item.url} title={item.name}>{Content}</Link>}
+                    {item.url && !item?.url.startsWith('https://') && <Link className="content" to={item.url} title={item.name}>{Content}</Link>}
+                    {item.url && item?.url.startsWith('https://') && <a className="content" href={item.url} target="_blank" rel="noopener noreferrer" title={item.name}>{Content}</a>}
                     {!item.url && <div className="content">{Content}</div>}
                 </div>);
             })}

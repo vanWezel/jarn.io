@@ -28,7 +28,7 @@ function Experience() {
                             period: employer.period,
                             name: employer.name,
                             location: employer.title,
-                            url: employer.slug && `/employer/${employer.slug}`,
+                            url: employer.slug ? `/employer/${employer.slug}` : employer.link,
                         }
                     })} type="employers" />
 

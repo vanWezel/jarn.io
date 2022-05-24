@@ -78,7 +78,7 @@ export const ProjectsMapped = Projects.map(project => {
     return {
         name: project.name,
         employer: employer ? employer.name : '',
-        employerSlug: employer ? employer.slug : '',
+        employerSlug: employer?.slug ? employer.slug  : '',
         url: project.url,
         stack: employer ? employer.stack : [],
         tools: employer ? employer.tools : [],
